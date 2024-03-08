@@ -9,7 +9,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 
 class HomePromoSlider extends StatelessWidget {
   const HomePromoSlider({
-    super.key, required this.banners,
+    super.key,
+    required this.banners,
   });
   final List<String> banners;
   @override
@@ -17,13 +18,13 @@ class HomePromoSlider extends StatelessWidget {
     final controller = Get.put(HomeController());
     return Column(
       children: [
-        CarouselSlider( options: CarouselOptions(
-          viewportFraction: 1,
-          onPageChanged: (index,_)=>controller.updatePageIndicator(index),
-        ),
-        items:banners.map((url)=>RoundedImage(imageUrl:url)).toList()
-        ),
-       
+        CarouselSlider(
+            options: CarouselOptions(
+              viewportFraction: 1,
+              onPageChanged: (index, _) =>
+                  controller.updatePageIndicator(index),
+            ),
+            items: banners.map((url) => RoundedImage(imageUrl: url)).toList()),
         const SizedBox(
           height: Sizes.spaceBtwItem,
         ),

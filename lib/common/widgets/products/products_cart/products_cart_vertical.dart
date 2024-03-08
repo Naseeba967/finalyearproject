@@ -3,7 +3,6 @@ import 'package:finalyearproject/common/style/shadows.dart';
 import 'package:finalyearproject/common/widgets/customShape/container/rounded_container.dart';
 import 'package:finalyearproject/common/widgets/icons/circular_icons.dart';
 import 'package:finalyearproject/common/widgets/images/rounded_image.dart';
-import 'package:finalyearproject/common/widgets/texts/brand_title_with_verified_icon.dart';
 import 'package:finalyearproject/common/widgets/texts/product_price_text.dart';
 import 'package:finalyearproject/common/widgets/texts/product_title_text.dart';
 import 'package:finalyearproject/features/shop/screens/product_detail/product_detail.dart';
@@ -23,7 +22,7 @@ class ProductsCartVertical extends StatelessWidget {
     return GestureDetector(
       onTap: () => Get.to(() => const ProductDetailScreen()),
       child: Container(
-        width: 180,
+        width: 110,
         padding: const EdgeInsets.all(1),
         decoration: BoxDecoration(
           boxShadow: [ShadowsStyle.vertcalProductShadoW],
@@ -33,12 +32,12 @@ class ProductsCartVertical extends StatelessWidget {
         child: Column(
           children: [
             RoundedContainer(
-              height: 180,
+              height: 150,
               padding: const EdgeInsets.all(Sizes.sm),
               backgroundColor: dark ? AppColor.dark : AppColor.light,
               child: Stack(children: [
                 const RoundedImage(
-                  imageUrl: 'assets/images/warning.png',
+                  imageUrl: 'assets/images/wheelchair.jpg',
                   applyImageRadius: true,
                 ),
                 Positioned(
@@ -67,10 +66,10 @@ class ProductsCartVertical extends StatelessWidget {
               ]),
             ),
             const SizedBox(
-              height: Sizes.spaceBtwItem / 2,
+              height: 10,
             ),
             const Padding(
-              padding: EdgeInsets.only(left: Sizes.sm),
+              padding: EdgeInsets.only(left: 1),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -79,10 +78,7 @@ class ProductsCartVertical extends StatelessWidget {
                     isSmallSize: true,
                   ),
                   SizedBox(
-                    height: Sizes.spaceBtwItem / 2,
-                  ),
-                  BrandTitleWithVerifiedIcon(
-                    title: 'Nike',
+                    height: 10,
                   ),
                 ],
               ),

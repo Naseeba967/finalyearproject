@@ -1,5 +1,6 @@
 import 'package:finalyearproject/common/widgets/image_text_widget/app_vertical_image_text.dart';
 import 'package:flutter/material.dart';
+
 class HomeCategories extends StatelessWidget {
   const HomeCategories({
     super.key,
@@ -16,8 +17,8 @@ class HomeCategories extends StatelessWidget {
           itemBuilder: (_, index) {
             return AppVerticalImageText(
               onTap: () {},
-              title: 'Shoes Category',
-              image: 'assets/images/customer.png',
+              title: 'Product Categories',
+              image: 'assets/images/admin.png',
             );
           }),
     );

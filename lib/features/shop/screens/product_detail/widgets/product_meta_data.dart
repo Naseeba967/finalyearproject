@@ -1,6 +1,5 @@
 import 'package:finalyearproject/common/widgets/customShape/container/rounded_container.dart';
 import 'package:finalyearproject/common/widgets/images/circular_image.dart';
-import 'package:finalyearproject/common/widgets/texts/brand_title_with_verified_icon.dart';
 import 'package:finalyearproject/common/widgets/texts/product_price_text.dart';
 import 'package:finalyearproject/common/widgets/texts/product_title_text.dart';
 import 'package:finalyearproject/utils/constant/colors.dart';
@@ -82,10 +81,6 @@ class ProductMetaData extends StatelessWidget {
               width: 32,
               height: 32,
               overLAYColor: darkMode ? AppColor.white : AppColor.black,
-            ),
-            const BrandTitleWithVerifiedIcon(
-              title: 'Nike',
-              brandTextSizes: TextSizes.medium,
             ),
           ],
         )

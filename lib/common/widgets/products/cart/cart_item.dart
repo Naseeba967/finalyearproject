@@ -1,11 +1,12 @@
 import 'package:finalyearproject/common/widgets/images/rounded_image.dart';
-import 'package:finalyearproject/common/widgets/texts/brand_title_with_verified_icon.dart';
+//import 'package:finalyearproject/common/widgets/texts/brand_title_with_verified_icon.dart';
 import 'package:finalyearproject/common/widgets/texts/product_title_text.dart';
 import 'package:finalyearproject/utils/constant/colors.dart';
 import 'package:finalyearproject/utils/constant/image_strings.dart';
 import 'package:finalyearproject/utils/constant/sizes.dart';
 import 'package:finalyearproject/utils/helpers/helpers_function.dart';
 import 'package:flutter/material.dart';
+
 class CartItems extends StatelessWidget {
   const CartItems({
     super.key,
@@ -25,17 +26,13 @@ class CartItems extends StatelessWidget {
               : AppColor.light,
         ),
         const SizedBox(
-          width : Sizes.spaceBtwItem,
+          width: Sizes.spaceBtwItem,
         ),
         const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            BrandTitleWithVerifiedIcon(title: 'EasyCare'),
-            ProductTitleText(title: 'Special people  care')
-          ],
+          children: [ProductTitleText(title: 'Special people  care')],
         )
       ],
     );
   }
 }
-
