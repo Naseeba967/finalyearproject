@@ -18,7 +18,7 @@ class HomeCategories extends StatelessWidget {
             return AppVerticalImageText(
               onTap: () {},
               title: 'Product Categories',
-              image: 'assets/images/admin.png',
+              image: 'assets/images/avatar.png',
             );
           }),
     );

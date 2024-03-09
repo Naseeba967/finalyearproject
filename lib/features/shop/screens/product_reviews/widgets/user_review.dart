@@ -22,13 +22,13 @@ class UserReviewCard extends StatelessWidget {
             Row(
               children: [
                 CircleAvatar(
-                  backgroundImage: AssetImage(AppImage.admin),
+                  backgroundImage: AssetImage(AppImage.avatar),
                 ),
                 const SizedBox(
                   width: Sizes.spaceBtwItem,
                 ),
                 Text(
-                  'Yakup',
+                  'Dummy User',
                   style: Theme.of(context).textTheme.titleLarge,
                 )
               ],
@@ -68,43 +68,43 @@ class UserReviewCard extends StatelessWidget {
         const SizedBox(
           height: Sizes.spaceBtwItem,
         ),
-        RoundedContainer(
-          backgroundColor: dark ? AppColor.darkGrey : AppColor.grey,
-          child: Padding(
-            padding: const EdgeInsets.all(Sizes.md),
-            child: Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'EasyCare',
-                      style: Theme.of(context).textTheme.titleMedium,
-                    ),
-                    Text(
-                      '9 Nov 2023',
-                      style: Theme.of(context).textTheme.bodyMedium,
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  height: Sizes.spaceBtwSection,
-                ),
-                const ReadMoreText(
-                  'This is s Product discription for easy care product. It can up to 4 lines. In this section, brief discussion of product...............................................For More details Please contact us on WhatsApp ',
-                  trimLines: 1,
-                  trimMode: TrimMode.Line,
-                  trimExpandedText: 'Less',
-                  trimCollapsedText: 'show more',
-                  moreStyle:
-                      TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
-                  lessStyle:
-                      TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
-                ),
-              ],
-            ),
-          ),
-        )
+        // RoundedContainer(
+        //   backgroundColor: dark ? AppColor.darkGrey : AppColor.grey,
+        //   child: Padding(
+        //     padding: const EdgeInsets.all(Sizes.md),
+        //     child: Column(
+        //       children: [
+        //         Row(
+        //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        //           children: [
+        //             Text(
+        //               'EasyCare',
+        //               style: Theme.of(context).textTheme.titleMedium,
+        //             ),
+        //             Text(
+        //               '9 Nov 2023',
+        //               style: Theme.of(context).textTheme.bodyMedium,
+        //             ),
+        //           ],
+        //         ),
+        //         const SizedBox(
+        //           height: Sizes.spaceBtwSection,
+        //         ),
+        //         const ReadMoreText(
+        //           'This is s Product discription for easy care product. It can up to 4 lines. In this section, brief discussion of product...............................................For More details Please contact us on WhatsApp ',
+        //           trimLines: 1,
+        //           trimMode: TrimMode.Line,
+        //           trimExpandedText: 'Less',
+        //           trimCollapsedText: 'show more',
+        //           moreStyle:
+        //               TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
+        //           lessStyle:
+        //               TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
+        //         ),
+        //       ],
+        //     ),
+        //   ),
+        // )
       ],
     );
   }

@@ -1,6 +1,5 @@
 import 'package:finalyearproject/common/widgets/appbar/appbar.dart';
 import 'package:finalyearproject/common/widgets/appbar/tab_bar.dart';
-import 'package:finalyearproject/common/widgets/brand/brand_card.dart';
 
 import 'package:finalyearproject/common/widgets/customShape/container/search_container.dart';
 import 'package:finalyearproject/common/widgets/layout/grid_layout.dart';
@@ -14,24 +13,21 @@ import 'package:finalyearproject/utils/constant/sizes.dart';
 import 'package:finalyearproject/utils/helpers/helpers_function.dart';
 import 'package:flutter/material.dart';
 
+import '../home/screen/widgets/home_promo_slider.dart';
+
 class Store extends StatelessWidget {
   const Store({super.key});
 
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
+      length: 7,
       child: Scaffold(
         appBar: Appbar(
           title: Text(
             'Store',
             style: Theme.of(context).textTheme.headlineMedium,
           ),
-          action: [
-            AppCartCounterIcon(
-              onPressed: () {},
-            )
-          ],
         ),
         body: NestedScrollView(
             headerSliverBuilder: (_, innerBoxIsScrolled) {
@@ -59,24 +55,17 @@ class Store extends StatelessWidget {
                             showBackground: false,
                             padding: EdgeInsets.zero,
                           ),
-                          const SizedBox(
-                            height: Sizes.spaceBtwSection,
+                          // const SizedBox(
+                          //   height: Sizes.spaceBtwSection,
+                          // ),
+                          // Text("hsahbsahb")
+                          HomePromoSlider(
+                            banners: [
+                              'assets/images/wheelchair.jpg',
+                              'assets/images/wheelchair2.jpg',
+                              'assets/images/wheelchair3.jpg'
+                            ],
                           ),
-                          const SectionHeading(
-                            title: 'Featured Brand',
-                            showActionButton: true,
-                          ),
-                          const SizedBox(
-                            height: Sizes.spaceBtwItem / 1.5,
-                          ),
-                          GridLayout(
-                              itemcount: 4,
-                              mainAxisExtent: 88,
-                              itemBuilder: (_, index) {
-                                return const BrandCard(
-                                  showBoder: true,
-                                );
-                              }),
                         ],
                       ),
                     ),
@@ -86,16 +75,32 @@ class Store extends StatelessWidget {
                           child: Text('Dumb'),
                         ),
                         Tab(
-                          child: Text('deaf'),
+                          child: Text('Deaf'),
                         ),
                         Tab(
-                          child: Text('blind'),
+                          child: Text('Blind'),
                         ),
+                        Tab(
+                          child: Text('Walkless'),
+                        ),
+                        Tab(
+                          child: Text('Gym'),
+                        ),
+                        Tab(
+                          child: Text('Medical'),
+                        ),
+                        Tab(
+                          child: Text('Services'),
+                        )
                       ],
                     ))
               ];
             },
             body: const TabBarView(children: [
+              CategoryTab(),
+              CategoryTab(),
+              CategoryTab(),
+              CategoryTab(),
               CategoryTab(),
               CategoryTab(),
               CategoryTab(),

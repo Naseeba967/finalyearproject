@@ -63,8 +63,8 @@ class ProductMetaData extends StatelessWidget {
         ),
         Row(
           children: [
-            const ProductTitleText(title: 'status'),
-            const SizedBox(height: Sizes.spaceBtwItem),
+            const ProductTitleText(title: 'Status'),
+            const SizedBox(width: Sizes.spaceBtwItem),
             Text(
               'In Stock',
               style: Theme.of(context).textTheme.titleMedium,
@@ -74,16 +74,6 @@ class ProductMetaData extends StatelessWidget {
         const SizedBox(
           height: Sizes.spaceBtwItem / 1.5,
         ),
-        Row(
-          children: [
-            CircularImage(
-              imageUrl: AppImage.customer,
-              width: 32,
-              height: 32,
-              overLAYColor: darkMode ? AppColor.white : AppColor.black,
-            ),
-          ],
-        )
       ],
     );
   }

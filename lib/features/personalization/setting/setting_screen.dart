@@ -66,59 +66,59 @@ class SettingScreen extends StatelessWidget {
                     title: 'My Orders',
                     subTitle: 'In progressand completed Orders',
                     onTap: () {}),
-                SettingMenuTile(
-                    icon: FontAwesomeIcons.moneyBills,
-                    title: 'Bank Account',
-                    subTitle: 'Withdraw blank to registered bank account',
-                    onTap: () {}),
-                SettingMenuTile(
-                    icon: FontAwesomeIcons.bell,
-                    title: 'Notification',
-                    subTitle: 'Set any kind of notification ',
-                    onTap: () {}),
-                SettingMenuTile(
-                    icon: Icons.security,
-                    title: 'Account   Privacy',
-                    subTitle: 'Manage Data usage ',
-                    onTap: () {}),
+                // SettingMenuTile(
+                //     icon: FontAwesomeIcons.moneyBills,
+                //     title: 'Bank Account',
+                //     subTitle: 'Withdraw blank to registered bank account',
+                //     onTap: () {}),
+                // SettingMenuTile(
+                //     icon: FontAwesomeIcons.bell,
+                //     title: 'Notification',
+                //     subTitle: 'Set any kind of notification ',
+                //     onTap: () {}),
+                // SettingMenuTile(
+                //     icon: Icons.security,
+                //     title: 'Account   Privacy',
+                //     subTitle: 'Manage Data usage ',
+                //     onTap: () {}),
                 // App setting
-                const SizedBox(
-                  height: Sizes.defaultSpace,
-                ),
-                const SectionHeading(
-                  title: 'App Setting',
-                  showActionButton: false,
-                ),
-                const SizedBox(
-                  height: Sizes.spaceBtwItem,
-                ),
-                SettingMenuTile(
-                  icon: FontAwesomeIcons.upload,
-                  title: 'Get Data',
-                  subTitle: 'Set recomendation based on lacation',
-                  onTap: () {},
-                ),
-                SettingMenuTile(
-                  icon: Icons.location_city,
-                  title: 'GeaLocation',
-                  subTitle: 'Set recomendation based on lacation',
-                  onTap: () {},
-                  trailing: Switch(value: true, onChanged: (value) {}),
-                ),
-                SettingMenuTile(
-                  icon: Icons.security,
-                  title: 'Safe  Mode',
-                  subTitle: 'Search result is safe',
-                  onTap: () {},
-                  trailing: Switch(value: false, onChanged: (value) {}),
-                ),
-                SettingMenuTile(
-                  icon: Icons.image,
-                  title: 'The image Quality',
-                  subTitle: 'Set image quality to seen',
-                  onTap: () {},
-                  trailing: Switch(value: false, onChanged: (value) {}),
-                ),
+                // const SizedBox(
+                //   height: Sizes.defaultSpace,
+                // ),
+                // const SectionHeading(
+                //   title: 'App Setting',
+                //   showActionButton: false,
+                // ),
+                // const SizedBox(
+                //   height: Sizes.spaceBtwItem,
+                // ),
+                // SettingMenuTile(
+                //   icon: FontAwesomeIcons.upload,
+                //   title: 'Get Data',
+                //   subTitle: 'Set recomendation based on lacation',
+                //   onTap: () {},
+                // ),
+                // SettingMenuTile(
+                //   icon: Icons.location_city,
+                //   title: 'GeaLocation',
+                //   subTitle: 'Set recomendation based on lacation',
+                //   onTap: () {},
+                //   trailing: Switch(value: true, onChanged: (value) {}),
+                // ),
+                // SettingMenuTile(
+                //   icon: Icons.security,
+                //   title: 'Safe  Mode',
+                //   subTitle: 'Search result is safe',
+                //   onTap: () {},
+                //   trailing: Switch(value: false, onChanged: (value) {}),
+                // ),
+                // SettingMenuTile(
+                //   icon: Icons.image,
+                //   title: 'The image Quality',
+                //   subTitle: 'Set image quality to seen',
+                //   onTap: () {},
+                //   trailing: Switch(value: false, onChanged: (value) {}),
+                // ),
                 const SizedBox(
                   height: Sizes.spaceBtwSection,
                 ),
