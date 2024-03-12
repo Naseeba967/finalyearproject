@@ -1,3 +1,7 @@
+import 'dart:math';
+
+import 'package:finalyearproject/Authentication/login.dart';
+import 'package:finalyearproject/Authentication/signup.dart';
 import 'package:finalyearproject/features/shop/screens/home/screen/home_screen.dart';
 import 'package:finalyearproject/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
@@ -13,12 +17,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Final Year Project',
-      themeMode: ThemeMode.system,
-      theme: AppTheme.lightTheme,
-      darkTheme: AppTheme.darkTheme,
-      debugShowCheckedModeBanner: false,
-      home: const HomeScreen(),
-    );
+        title: 'Final Year Project',
+        themeMode: ThemeMode.system,
+        theme: AppTheme.lightTheme,
+        darkTheme: AppTheme.darkTheme,
+        debugShowCheckedModeBanner: false,
+        home: Login()
+        //  HomeScreen(),
+        );
   }
 }
