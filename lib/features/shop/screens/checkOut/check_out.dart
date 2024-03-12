@@ -60,7 +60,7 @@ class CheckOut extends StatelessWidget {
                               backgroundColor: Colors.grey.withOpacity(0.2),
                               side: BorderSide(
                                   color: Colors.grey.withOpacity(0.1))),
-                          child: Text('Apply')))
+                          child: const Text('Apply')))
                 ]),
               )
             ],

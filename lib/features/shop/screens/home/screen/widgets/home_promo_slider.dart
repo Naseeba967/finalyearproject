@@ -1,6 +1,7 @@
 import 'package:finalyearproject/common/widgets/customShape/container/circular_container.dart';
 import 'package:finalyearproject/common/widgets/images/rounded_image.dart';
-import 'package:finalyearproject/features/shop/controller/home_controller.dart';
+
+import 'package:finalyearproject/features/shop/screens/home/controller/home_controller.dart';
 import 'package:finalyearproject/utils/constant/colors.dart';
 import 'package:finalyearproject/utils/constant/sizes.dart';
 import 'package:flutter/material.dart';
