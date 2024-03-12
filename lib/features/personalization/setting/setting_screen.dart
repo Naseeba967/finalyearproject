@@ -6,6 +6,7 @@ import 'package:finalyearproject/common/widgets/texts/section_heading.dart';
 import 'package:finalyearproject/common/widgets/list_tile/profile_tile.dart';
 import 'package:finalyearproject/features/personalization/address/address.dart';
 import 'package:finalyearproject/features/personalization/profile/profile_screen.dart';
+import 'package:finalyearproject/features/shop/screens/cart/cart.dart';
 import 'package:finalyearproject/utils/constant/colors.dart';
 
 import 'package:finalyearproject/utils/constant/sizes.dart';
@@ -60,7 +61,9 @@ class SettingScreen extends StatelessWidget {
                     icon: Icons.shopping_cart,
                     title: 'My Cart',
                     subTitle: 'Add, remove products and move to check out',
-                    onTap: () {}),
+                    onTap: () {
+                      Get.to(() => const CartScreen());
+                    }),
                 SettingMenuTile(
                     icon: FontAwesomeIcons.bagShopping,
                     title: 'My Orders',
