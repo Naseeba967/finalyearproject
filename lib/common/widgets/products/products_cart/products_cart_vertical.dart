@@ -66,28 +66,29 @@ class ProductsCartVertical extends StatelessWidget {
                     ))
               ]),
             ),
-            const SizedBox(
-              height: Sizes.spaceBtwItem / 2,
-            ),
-            const Padding(
-              padding: EdgeInsets.only(left: Sizes.sm),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  ProductTitleText(
-                    title: "Electric Wheel Chair",
-                    isSmallSize: true,
-                  ),
-                  SizedBox(
-                    height: Sizes.spaceBtwItem / 2,
-                  ),
-                  BrandTitleWithVerifiedIcon(
-                    title: 'Nike',
-                  ),
-                ],
-              ),
-            ),
-            const Spacer(),
+            // const SizedBox(
+            //   height: Sizes.spaceBtwItem / 2,
+            // ),
+
+            // const Padding(
+            //   padding: EdgeInsets.only(left: Sizes.sm),
+            //   child: Column(
+            //     crossAxisAlignment: CrossAxisAlignment.start,
+            //     children: [
+            //       ProductTitleText(
+            //         title: "Electric Wheel Chair",
+            //         isSmallSize: true,
+            //       ),
+            //       SizedBox(
+            //         height: Sizes.spaceBtwItem / 2,
+            //       ),
+            //       BrandTitleWithVerifiedIcon(
+            //         title: 'Nike',
+            //       ),
+            //     ],
+            //   ),
+            // ),
+            // const Spacer(),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
