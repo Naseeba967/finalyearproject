@@ -26,7 +26,7 @@ class ProfileScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     CircularImage(
-                      imageUrl: AppImage.customer,
+                      imageUrl: AppImage.admin,
                       width: 80,
                       height: 80,
                     ),
@@ -46,7 +46,7 @@ class ProfileScreen extends StatelessWidget {
               const SizedBox(height: Sizes.spaceBtwItem),
               ProfileMenu(
                 title: 'Name',
-                value: 'First Name',
+                value: 'Hamza',
                 onTap: () {},
               ),
               ProfileMenu(
@@ -89,10 +89,15 @@ class ProfileScreen extends StatelessWidget {
                 onTap: () {},
               ),
               const Divider(),
-               const SizedBox(height: Sizes.spaceBtwItem),
-               Center(
-                child: TextButton(onPressed: (){}, child:const  Text('Delete Account ',style: TextStyle(color: Colors.red),)),
-               )
+              const SizedBox(height: Sizes.spaceBtwItem),
+              Center(
+                child: TextButton(
+                    onPressed: () {},
+                    child: const Text(
+                      'Delete Account ',
+                      style: TextStyle(color: Colors.red),
+                    )),
+              )
             ],
           ),
         ),

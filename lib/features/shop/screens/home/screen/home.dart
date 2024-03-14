@@ -65,18 +65,15 @@ class Home extends StatelessWidget {
                 children: [
                   const HomePromoSlider(
                     banners: [
-                      'assets/images/customer.png',
-                      'assets/images/avatar.png',
-                      'assets/images/admin.png'
+                      'assets/images/wheelchair.jpg',
+                      'assets/images/wheelchair2.jpg',
+                      'assets/images/wheelchair3.jpg'
                     ],
                   ),
                   const SizedBox(
                     height: Sizes.spaceBtwSection,
                   ),
                   const SectionHeading(title: "Popular Products"),
-                  const SizedBox(
-                    height: Sizes.spaceBtwItem,
-                  ),
                   GridLayout(
                     itemcount: 8,
                     itemBuilder: (_, index) => const ProductsCartVertical(),

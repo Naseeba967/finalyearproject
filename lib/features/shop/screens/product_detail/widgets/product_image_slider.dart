@@ -12,14 +12,11 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class ProductImageSlider extends StatelessWidget {
   const ProductImageSlider({
     super.key,
-  
   });
-
-
 
   @override
   Widget build(BuildContext context) {
-        final dark = HelpersFunction.isDarkMode(context);
+    final dark = HelpersFunction.isDarkMode(context);
     return CurvedEdgeWidgets(
       child: Container(
         color: dark ? AppColor.grey : AppColor.light,
@@ -29,35 +26,10 @@ class ProductImageSlider extends StatelessWidget {
               child: SizedBox(
                   height: 400,
                   child: Padding(
-                    padding:
-                        const EdgeInsets.all(Sizes.productImageRadius),
-                    child: Image(image: AssetImage(AppImage.avatar)),
+                    padding: const EdgeInsets.all(Sizes.productImageRadius),
+                    child: Image(
+                        image: AssetImage("assets/images/wheelchair.jpg")),
                   )),
-            ),
-            Positioned(
-              right: 0,
-              bottom: 30,
-              left: Sizes.defaultSpace,
-              child: SizedBox(
-                height: 80,
-                child: ListView.separated(
-                  shrinkWrap: true,
-                  scrollDirection: Axis.horizontal,
-                  physics: const AlwaysScrollableScrollPhysics(),
-                  separatorBuilder: (_, __) => const SizedBox(
-                    width: Sizes.spaceBtwItem,
-                  ),
-                  itemCount: 7,
-                  itemBuilder: (_, index) => RoundedImage(
-                    imageUrl: AppImage.customer,
-                    width: 80,
-                    backgroundColor:
-                        dark ? AppColor.darkGrey : AppColor.light,
-                    boder: Border.all(color: AppColor.primaryColor),
-                    padding: const EdgeInsets.all(Sizes.sm),
-                  ),
-                ),
-              ),
             ),
             const Appbar(
               showBackArrow: true,

@@ -32,7 +32,7 @@ class ProductDetailScreen extends StatelessWidget {
                 children: [
                   const RatingAndShare(),
                   const ProductMetaData(),
-                  const ProductAttribute(),
+                  //   const ProductAttribute(),
                   const SizedBox(
                     height: Sizes.spaceBtwSection,
                   ),

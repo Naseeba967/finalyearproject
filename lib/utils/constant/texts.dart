@@ -1,4 +1,4 @@
-class AppText{
+class AppText {
   static const String onBoardingTitle1 = "Choose your product";
   static const String onBoardingTitle2 = "Select Payment method";
   static const String onBoardingTitle3 = "Deliver at your step ";
@@ -11,5 +11,5 @@ class AppText{
 
 //home
   static const String homeAppbarTitle = "Good day for Shopping";
-  static const String homeAppBarsubTitle = "Easy Care";
+  static const String homeAppBarsubTitle = "EasyCare";
 }

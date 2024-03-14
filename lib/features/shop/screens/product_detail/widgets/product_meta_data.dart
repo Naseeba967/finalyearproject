@@ -1,6 +1,5 @@
 import 'package:finalyearproject/common/widgets/customShape/container/rounded_container.dart';
 import 'package:finalyearproject/common/widgets/images/circular_image.dart';
-import 'package:finalyearproject/common/widgets/texts/brand_title_with_verified_icon.dart';
 import 'package:finalyearproject/common/widgets/texts/product_price_text.dart';
 import 'package:finalyearproject/common/widgets/texts/product_title_text.dart';
 import 'package:finalyearproject/utils/constant/colors.dart';
@@ -64,8 +63,8 @@ class ProductMetaData extends StatelessWidget {
         ),
         Row(
           children: [
-            const ProductTitleText(title: 'status'),
-            const SizedBox(height: Sizes.spaceBtwItem),
+            const ProductTitleText(title: 'Status'),
+            const SizedBox(width: Sizes.spaceBtwItem),
             Text(
               'In Stock',
               style: Theme.of(context).textTheme.titleMedium,
@@ -75,20 +74,6 @@ class ProductMetaData extends StatelessWidget {
         const SizedBox(
           height: Sizes.spaceBtwItem / 1.5,
         ),
-        Row(
-          children: [
-            CircularImage(
-              imageUrl: AppImage.customer,
-              width: 32,
-              height: 32,
-              overLAYColor: darkMode ? AppColor.white : AppColor.black,
-            ),
-            const BrandTitleWithVerifiedIcon(
-              title: 'Nike',
-              brandTextSizes: TextSizes.medium,
-            ),
-          ],
-        )
       ],
     );
   }

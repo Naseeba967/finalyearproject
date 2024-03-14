@@ -1,4 +1,3 @@
-import 'package:finalyearproject/common/widgets/brand/brand_show_case.dart';
 import 'package:finalyearproject/common/widgets/layout/grid_layout.dart';
 import 'package:finalyearproject/common/widgets/products/products_cart/products_cart_vertical.dart';
 import 'package:finalyearproject/common/widgets/texts/section_heading.dart';
@@ -21,12 +20,6 @@ class CategoryTab extends StatelessWidget {
           padding: const EdgeInsets.all(Sizes.defaultSpace),
           child: Column(
             children: [
-              BrandShowCase(
-                images: [AppImage.admin, AppImage.avatar, AppImage.customer],
-              ),
-              BrandShowCase(
-                images: [AppImage.admin, AppImage.avatar, AppImage.customer],
-              ),
               SectionHeading(
                 title: 'You might like',
                 onPressed: () {},
