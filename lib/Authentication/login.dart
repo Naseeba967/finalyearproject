@@ -1,5 +1,6 @@
 import 'package:finalyearproject/Authentication/signup.dart';
 import 'package:finalyearproject/features/shop/screens/home/screen/home.dart';
+import 'package:finalyearproject/features/shop/screens/home/screen/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -79,7 +80,7 @@ class Login extends StatelessWidget {
               ElevatedButton(
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const Home()));
+                      MaterialPageRoute(builder: (context) => const HomeScreen()));
                 },
                 child: Text("Login"),
                 style: ElevatedButton.styleFrom(

@@ -1,5 +1,6 @@
 import 'package:finalyearproject/Authentication/login.dart';
 import 'package:finalyearproject/features/shop/screens/home/screen/home.dart';
+import 'package:finalyearproject/features/shop/screens/home/screen/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class Signup extends StatelessWidget {
@@ -88,12 +89,12 @@ class Signup extends StatelessWidget {
               SizedBox(
                 height: 50,
               ),
-              ElevatedButton(
+              ElevatedButton(   
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const Home()));
+                      MaterialPageRoute(builder: (context) => const HomeScreen()));
                 },
-                child: Text("Login"),
+                child: Text("sign up"),
                 style: ElevatedButton.styleFrom(
                     primary: Colors.blue, // Background color
                     onPrimary: Colors.white, // Text color
