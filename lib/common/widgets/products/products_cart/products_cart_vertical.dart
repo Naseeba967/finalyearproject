@@ -84,9 +84,7 @@ class ProductsCartVertical extends StatelessWidget {
                   SizedBox(
                     height: Sizes.spaceBtwItem / 2,
                   ),
-                  BrandTitleWithVerifiedIcon(
-                    title: 'Nike',
-                  ),
+               
                 ],
               ),
             ),
