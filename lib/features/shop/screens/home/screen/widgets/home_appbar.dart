@@ -5,6 +5,7 @@ import 'package:finalyearproject/utils/constant/colors.dart';
 import 'package:finalyearproject/utils/constant/texts.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:persistent_shopping_cart/persistent_shopping_cart.dart';
 
 class HomeAppBar extends StatelessWidget {
   const HomeAppBar({
@@ -38,10 +39,19 @@ class HomeAppBar extends StatelessWidget {
         ),
       ),
       action: [
-        AppCartCounterIcon(
-          onPressed: () => Get.to(() => const CartScreen()),
-          iconColor: AppColor.white,
-        )
+        // AppCartCounterIcon(
+        //   onPressed: () => Get.to(() => const CartScreen()),
+        //   iconColor: Colors.red,
+        // )
+        PersistentShoppingCart().showCartItemCountWidget(
+          cartItemCountWidgetBuilder: (itemcount)=>
+            IconButton(onPressed:
+             () => Get.to(() => const CartScreen()),
+             icon: Badge(
+              label: Text(itemcount.toString()),
+              child: Icon(Icons.shopping_bag,color: Colors.white,size: 25,)
+              ,))
+          )
       ],
     );
   }

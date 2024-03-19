@@ -1,3 +1,4 @@
+import 'package:finalyearproject/features/shop/screens/cart/widgets/card_item_list.dart';
 import 'package:finalyearproject/features/shop/screens/product_detail/widgets/bottom_add_cart.dart';
 import 'package:finalyearproject/common/widgets/texts/section_heading.dart';
 import 'package:finalyearproject/features/shop/screens/product_detail/widgets/product_attribute.dart';
@@ -5,19 +6,26 @@ import 'package:finalyearproject/features/shop/screens/product_detail/widgets/pr
 import 'package:finalyearproject/features/shop/screens/product_detail/widgets/product_meta_data.dart';
 import 'package:finalyearproject/features/shop/screens/product_detail/widgets/rating_and_share.dart';
 import 'package:finalyearproject/features/shop/screens/product_reviews/product_review.dart';
+import 'package:finalyearproject/model/productModel.dart';
 import 'package:finalyearproject/utils/constant/sizes.dart';
 import 'package:get/get.dart';
+import 'package:persistent_shopping_cart/model/cart_model.dart';
+import 'package:persistent_shopping_cart/persistent_shopping_cart.dart';
 import 'package:readmore/readmore.dart';
-
 import 'package:flutter/material.dart';
 
 class ProductDetailScreen extends StatelessWidget {
-  const ProductDetailScreen({super.key});
+ProductDetailScreen({super.key});
+
+PersistentShoppingCart cart=PersistentShoppingCart();
+// List<ItemModel> itemList=const [
+// ItemModel(productId: "123", productName: "Easycare", productDescription: "Disable Person Product", productThumbnail: "no image", unitPrice: 3990)
+// ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: const BottomAddCart(),
+    //  bottomNavigationBar: const BottomAddCart(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -36,11 +44,54 @@ class ProductDetailScreen extends StatelessWidget {
                   const SizedBox(
                     height: Sizes.spaceBtwSection,
                   ),
+                
                   SizedBox(
-                    width: double.infinity,
+                    width: MediaQuery.of(context).size.width * 0.85,
                     child: ElevatedButton(
-                        onPressed: () {}, child: const Text('CheckOut')),
+                        onPressed: () {}, child: const Text('Buy Now')),
                   ),
+                  
+                  PersistentShoppingCart().showAndUpdateCartItemWidget(
+                    inCartWidget: 
+                     SizedBox(width: double.infinity,
+                       child: Container(height: 55,
+                       decoration: BoxDecoration(color: Colors.white,
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: Colors.red)),
+                         child: Center(
+                           child: Text("Remove",
+                           style: TextStyle(fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                           color: Colors.black),),
+                         ),
+                       ),
+                     ),
+                    notInCartWidget:
+                     SizedBox(width: double.infinity,
+                       child: Container(height: 55,
+                       decoration: BoxDecoration(color: Colors.blue,
+                        borderRadius: BorderRadius.circular(10)),
+                         child: Center(
+                           child: Text("Add to cart",
+                           style: TextStyle(
+                            fontSize: 18,
+                           color: Colors.white),),
+                         ),
+                       ),
+                     ),
+                     product: PersistentShoppingCartItem(
+                      productId: "123", 
+                      
+                      productName: "`123",
+                       unitPrice: double.parse("123"), 
+                       quantity: 123)),
+                  
+                  // SizedBox(height: 20,),
+                  //    SizedBox(
+                  //   width: double.infinity,
+                  //   child: ElevatedButton(
+                  //       onPressed: () {}, child: const Text('Add to Cart')),
+                  // ),
                   const SizedBox(
                     height: Sizes.spaceBtwSection,
                   ),
@@ -74,7 +125,8 @@ class ProductDetailScreen extends StatelessWidget {
                         showActionButton: false,
                       ),
                       IconButton(
-                          onPressed: () => Get.to(const ProductReviewScreen()),
+                          onPressed: () => Get.to(
+                            const ProductReviewScreen()),
                           icon: const Icon(
                             Icons.arrow_right,
                             size: 28,

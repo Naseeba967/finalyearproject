@@ -4,6 +4,7 @@ import 'package:finalyearproject/utils/constant/sizes.dart';
 import 'package:finalyearproject/utils/helpers/helpers_function.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:persistent_shopping_cart/persistent_shopping_cart.dart';
 
 class AddRemoveButton extends StatelessWidget {
   const AddRemoveButton({
@@ -15,31 +16,18 @@ class AddRemoveButton extends StatelessWidget {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        CircularIcon(
-          icon: FontAwesomeIcons.minus,
-          width: 32,
-          height: 32,
-          size: Sizes.md,
-          color: HelpersFunction.isDarkMode(context)
-              ? AppColor.white
-              : AppColor.dark,
-          backgroundColor: HelpersFunction.isDarkMode(context)
-              ? AppColor.darkerGrey
-              : AppColor.light,
-        ),
+     IconButton(onPressed: (){
+      PersistentShoppingCart().incrementCartItemQuantity("123");
+     }, icon: Icon(Icons.remove)),
         const SizedBox(width: Sizes.spaceBtwItem),
         Text(
           '2',
           style: Theme.of(context).textTheme.titleSmall,
         ),
         const SizedBox(width: Sizes.spaceBtwItem),
-        const CircularIcon(
-            icon: FontAwesomeIcons.plus,
-            width: 32,
-            height: 32,
-            size: Sizes.md,
-            color: AppColor.white,
-            backgroundColor: AppColor.primaryColor),
+         IconButton(onPressed: (){
+      PersistentShoppingCart().decrementCartItemQuantity("123");
+     }, icon: Icon(Icons.add)),
       ],
     );
   }

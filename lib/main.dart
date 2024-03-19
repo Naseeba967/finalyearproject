@@ -6,8 +6,12 @@ import 'package:finalyearproject/features/shop/screens/home/screen/home_screen.d
 import 'package:finalyearproject/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:persistent_shopping_cart/persistent_shopping_cart.dart';
+import 'package:persistent_shopping_cart/model/cart_model.dart';
+import 'package:persistent_shopping_cart/persistent_shopping_cart.dart';
 
-void main() {
+void main()async {
+  await PersistentShoppingCart().init();
   runApp(const MyApp());
 }
 

@@ -24,12 +24,12 @@ class CheckOut extends StatelessWidget {
           padding: const EdgeInsets.all(Sizes.defaultSpace),
           child: Column(
             children: [
-              const CartItemsList(
-                showAddRemoveButton: false,
-              ),
-              const SizedBox(
-                height: Sizes.spaceBtwItem,
-              ),
+              // const CartItemsList(
+              //   showAddRemoveButton: false,
+              // ),
+              // const SizedBox(
+              //   height: Sizes.spaceBtwItem,
+              // ),
               RoundedContainer(
                 showBoder: true,
                 backgroundColor: AppColor.white,

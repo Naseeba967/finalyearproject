@@ -31,7 +31,8 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: IndexedStack(
         index: currentIndex,
-        children: const [Home(), Store(), FavouriteScreen(), SettingScreen()],
+        children: const [
+          Home(), Store(), FavouriteScreen(), SettingScreen()],
       ),
       bottomNavigationBar: Container(
         height: 82,
@@ -58,52 +59,56 @@ class _HomeScreenState extends State<HomeScreen> {
           const SizedBox(
             height: 10,
           ),
-          Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                for (int i = 0; i < navigationIcons.length; i++) ...{
-                  Expanded(
-                    flex: 1,
-                    child: GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          currentIndex = i;
-                        });
-                      },
-                      child: Center(
-                        child: FaIcon(
-                          navigationIcons[i],
-                          color: i == currentIndex
-                              ? Colors.blueAccent
-                              : Colors.black54,
-                          size: i == currentIndex ? 20 : 15,
+          Padding(
+            padding: const EdgeInsets.only(top: 10),
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  for (int i = 0; i < navigationIcons.length; i++) ...{
+                    Expanded(
+                      flex: 1,
+                      child: GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            currentIndex = i;
+                          });
+                        },
+                        child: Center(
+                          child: FaIcon(
+                            navigationIcons[i],
+                            color: i == currentIndex
+                                ? Colors.blueAccent
+                                : Colors.black54,
+                            size: i == currentIndex ? 25 : 20,
+                          ),
                         ),
                       ),
-                    ),
-                  )
-                },
-              ]),
-          Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                for (int i = 0; i < iconName.length; i++) ...{
-                  Expanded(
-                    child: Center(
-                      child: Text(
-                        iconName[i],
-                        style: TextStyle(
-                          color: i == currentIndex
-                              ? Colors.blueAccent
-                              : Colors.black54,
-                          fontSize: i == currentIndex ? 15 : 12,
-                        ),
-                      ),
-                    ),
-                  ),
-                },
-              ]),
+                    )
+                  },
+                ]),
+          ),
+          // Row(
+          //     mainAxisAlignment: MainAxisAlignment.center,
+          //     crossAxisAlignment: CrossAxisAlignment.start,
+          //     children: [
+          //       for (int i = 0; i < iconName.length; i++) ...{
+          //         Expanded(
+          //           child: Center(
+          //             child: Text(
+          //               iconName[i],
+          //               style: TextStyle(
+          //                 color: i == currentIndex
+          //                     ? Colors.blueAccent
+          //                     : Colors.black54,
+          //                 fontSize: i == currentIndex ? 15 : 12,
+          //               ),
+          //             ),
+          //           ),
+          //         ),
+              
+          //       },
+          //     ]),
         ]),
       ),
     );

@@ -26,9 +26,11 @@ class CartScreen extends StatelessWidget {
         ),
         child: CartItemsList(),
       ),
-      bottomNavigationBar: Padding(
+      bottomNavigationBar: 
+      Padding(
         padding: const EdgeInsets.all(Sizes.defaultSpace),
         child: ElevatedButton(
+         
             onPressed: () => Get.to(() => const CheckOut()),
             child: const Text('CheckOut')),
       ),

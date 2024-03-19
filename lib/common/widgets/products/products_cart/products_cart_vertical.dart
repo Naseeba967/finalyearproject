@@ -23,7 +23,7 @@ class ProductsCartVertical extends StatelessWidget {
         Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) => const ProductDetailScreen()));
+                builder: (context) =>  ProductDetailScreen()));
       },
       // => Get.to(() => const ProductDetailScreen()),
       child: Container(
