@@ -1,12 +1,27 @@
 import 'package:finalyearproject/Authentication/signup.dart';
 import 'package:finalyearproject/features/shop/screens/home/screen/home.dart';
 import 'package:finalyearproject/features/shop/screens/home/screen/home_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class Login extends StatelessWidget {
-  const Login({super.key});
-
+  Login({super.key});
+loginHandler() async {
+  try {
+  final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
+    email: emailController.text,
+    password: passwordController.text
+  );
+  print(credential.user?.uid
+  );
+} on FirebaseAuthException catch (e) {
+ print(e.code);
+}
+}
+TextEditingController emailController= TextEditingController();
+TextEditingController passwordController= TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,20 +50,21 @@ class Login extends StatelessWidget {
               SizedBox(
                 height: 80,
               ),
-              TextField(
+              TextField(controller: emailController,
                 decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.black),
                       borderRadius: BorderRadius.circular(15),
                     ),
                     hintText: "Email",
+                    
                     hintStyle: TextStyle(
                         fontWeight: FontWeight.bold, color: Colors.grey)),
               ),
               SizedBox(
                 height: 20,
               ),
-              TextField(
+              TextField(controller: passwordController,
                 decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.black),
@@ -79,8 +95,7 @@ class Login extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const HomeScreen()));
+               loginHandler();  
                 },
                 child: Text("Login"),
                 style: ElevatedButton.styleFrom(
