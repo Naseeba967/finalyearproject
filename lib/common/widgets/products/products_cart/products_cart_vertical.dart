@@ -32,7 +32,7 @@ class ProductsCartVertical extends StatelessWidget {
       child: Column(
         children: [
           Container(color: Colors.white,
-            height: 220,
+            height: 200,
             padding: const EdgeInsets.all(Sizes.sm),
           
             child: 
@@ -49,7 +49,7 @@ class ProductsCartVertical extends StatelessWidget {
             MaterialPageRoute(
                 builder: (context) =>  ProductDetailScreen()));
                 },
-                  child: Image(image: AssetImage("assets/images/wheelchair.jpg"))),),
+                  child: Image(image: AssetImage("assets/images/wheelchair2.jpg"))),),
               Positioned(
                 top: 8,
                 child: RoundedContainer(
@@ -93,12 +93,12 @@ class ProductsCartVertical extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
 
-                // ProductTitleText(
-                //   title: "$productName",
-                //   isSmallSize: true,
+                ProductTitleText(
+                  title: "$productName",
+            
                   
-                // ),
-                Text("$productName"),
+                ),
+               
 
                 SizedBox(
                   height: Sizes.spaceBtwItem / 2,
@@ -113,10 +113,12 @@ class ProductsCartVertical extends StatelessWidget {
             children: [
               Padding(
                 padding: EdgeInsets.only(left: 10),
-                child: Text("$productPrice"),
-                // ProductPriceText(
-                //   price: "$productPrice",
-                // ),
+                child: 
+                //Text("$productPrice",style: TextStyle(fontSize: 12),),
+                ProductPriceText(
+                  price: "$productPrice",
+                 
+                ),
               ),
               Container(
                 decoration: const BoxDecoration(

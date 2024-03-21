@@ -6,6 +6,7 @@ import 'package:finalyearproject/common/widgets/layout/grid_layout.dart';
 import 'package:finalyearproject/common/widgets/products/products_cart/app_cart_counter_icon.dart';
 
 import 'package:finalyearproject/common/widgets/texts/section_heading.dart';
+import 'package:finalyearproject/features/shop/screens/Services/ServicesSceen.dart';
 import 'package:finalyearproject/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:finalyearproject/utils/constant/colors.dart';
 
@@ -61,7 +62,7 @@ class Store extends StatelessWidget {
                           // Text("hsahbsahb")
                           HomePromoSlider(
                             banners: [
-                              'assets/images/wheelchair.jpg',
+                              'assets/images/1.png',
                               'assets/images/wheelchair2.jpg',
                               'assets/images/wheelchair3.jpg'
                             ],
@@ -103,9 +104,11 @@ class Store extends StatelessWidget {
               CategoryTab(),
               CategoryTab(),
               CategoryTab(),
-              CategoryTab(),
+              ServicesScreen()
+              
             ])),
       ),
     );
   }
 }
+

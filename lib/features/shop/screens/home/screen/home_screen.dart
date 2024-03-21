@@ -17,7 +17,8 @@ class _HomeScreenState extends State<HomeScreen> {
   List<IconData> navigationIcons = [
     FontAwesomeIcons.house,
     FontAwesomeIcons.store,
-    FontAwesomeIcons.cartShopping,
+     FontAwesomeIcons.heart, 
+    //Icons.favorite_border_outlined,
     FontAwesomeIcons.solidUser
   ];
   List<String> iconName = ["home", "store", " Favourite", "profile"];

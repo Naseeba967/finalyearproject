@@ -32,11 +32,11 @@ class SectionHeading extends StatelessWidget {
             ),
           ],
         ),
-        if (showActionButton)
-          TextButton(
-            onPressed: onPressed,
-            child: Text(buttonTitle),
-          )
+        // if (showActionButton)
+        //   TextButton(
+        //     onPressed: onPressed,
+        //     child: Text(buttonTitle),
+        //   )
       ],
     );
   }
