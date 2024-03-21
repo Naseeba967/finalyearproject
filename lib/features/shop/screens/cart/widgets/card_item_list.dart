@@ -19,7 +19,7 @@ class CartItemsList extends StatelessWidget {
     Padding(
       padding: const EdgeInsets.only(top: 5,right: 10,bottom: 5,left: 10),
       child: Card(color: Colors.white,
-        child: Column(
+      child: Column(
                       children: [
                         const CartItems(),
                         if (showAddRemoveButton)

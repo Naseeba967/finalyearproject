@@ -2,17 +2,12 @@ import 'package:finalyearproject/common/widgets/customShape/container/app_primar
 import 'package:finalyearproject/common/widgets/customShape/container/search_container.dart';
 import 'package:finalyearproject/common/widgets/layout/grid_layout.dart';
 import 'package:finalyearproject/common/widgets/products/products_cart/products_cart_vertical.dart';
-
 import 'package:finalyearproject/common/widgets/texts/section_heading.dart';
-
 import 'package:finalyearproject/features/shop/screens/home/screen/widgets/home_appbar.dart';
 import 'package:finalyearproject/features/shop/screens/home/screen/widgets/home_categories.dart';
 import 'package:finalyearproject/features/shop/screens/home/screen/widgets/home_promo_slider.dart';
-
 import 'package:finalyearproject/utils/constant/sizes.dart';
-
 import 'package:flutter/material.dart';
-
 class Home extends StatelessWidget {
   const Home({super.key});
 
@@ -75,8 +70,10 @@ class Home extends StatelessWidget {
                   ),
                   const SectionHeading(title: "Popular Products"),
                   GridLayout(
-                    itemcount: 8,
-                    itemBuilder: (_, index) => const ProductsCartVertical(),
+                    itemcount: 5,
+                    itemBuilder: (_, index) =>
+                     const 
+                     ProductsCartVertical( productName: "Wheel chair", productPrice: "123"),
                   ),
                 ],
               ),

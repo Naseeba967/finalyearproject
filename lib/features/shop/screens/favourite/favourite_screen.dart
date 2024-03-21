@@ -31,7 +31,8 @@ class FavouriteScreen extends StatelessWidget {
         child: Padding(padding: const EdgeInsets.all(Sizes.defaultSpace),
       child: Column(
         children: [
-       GridLayout(itemcount: 4, itemBuilder: (_, index)=> const ProductsCartVertical())
+       GridLayout(itemcount: 4, itemBuilder: (_, index)=> 
+       const  ProductsCartVertical( productName: "Wheel chair", productPrice: "123"),)
         ],
       ),
       

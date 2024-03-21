@@ -29,7 +29,8 @@ class CategoryTab extends StatelessWidget {
               ),
               GridLayout(
                   itemcount: 8,
-                  itemBuilder: (_, index) => const ProductsCartVertical()),
+                  itemBuilder: (_, index) =>
+                   const  ProductsCartVertical( productName: "Wheel chair", productPrice: "123"),),
               const SizedBox(
                 height: Sizes.spaceBtwSection,
               )
