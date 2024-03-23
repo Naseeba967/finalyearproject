@@ -1,4 +1,4 @@
-import 'package:finalyearproject/Authentication/signup.dart';
+import 'package:finalyearproject/Authentication/userSignup.dart';
 import 'package:finalyearproject/features/shop/screens/home/screen/home.dart';
 import 'package:finalyearproject/features/shop/screens/home/screen/home_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';

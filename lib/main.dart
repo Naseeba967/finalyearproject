@@ -1,7 +1,8 @@
 import 'dart:math';
 
-import 'package:finalyearproject/Authentication/login.dart';
-import 'package:finalyearproject/Authentication/signup.dart';
+// import 'package:finalyearproject/Authentication/login.dart';
+// import 'package:finalyearproject/Authentication/signup.dart';
+import 'package:finalyearproject/Authentication/userlogin.dart';
 import 'package:finalyearproject/features/shop/screens/home/screen/home_screen.dart';
 import 'package:finalyearproject/utils/theme/theme.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -31,8 +32,9 @@ class MyApp extends StatelessWidget {
         theme: AppTheme.lightTheme,
         darkTheme: AppTheme.darkTheme,
         debugShowCheckedModeBanner: false,
-        home: Login()
-        //  HomeScreen(),
+        home:   
+     Login()
+        //HomeScreen(),
         
         );
   }
